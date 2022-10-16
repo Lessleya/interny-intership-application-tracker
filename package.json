@@ -1,0 +1,20 @@
+{
+  "name": "interny-intership-application-tracker",
+  "version": "1.0.0",
+  "description": "Interny is a web app that help college students to keep track of internship applications. This app perform CRUD operations on a MongoDB database, is published to the web, incorporate security measures, and include API documentation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lessleya/interny-intership-application-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lessleya/interny-intership-application-tracker/issues"
+  },
+  "homepage": "https://github.com/Lessleya/interny-intership-application-tracker#readme"
+}
