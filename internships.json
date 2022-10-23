@@ -1,0 +1,41 @@
+{
+
+    "internship": {
+        "company": "Adobe",
+        "appDeadline": "10/25/2022",
+        "interntTitle": "Full-stack Developer Intern",
+        "appSubmitted": "yes",
+        "appSubmittedDate": "10/12/2022",
+        "interview" : "no",
+        "rejected" : "no",
+        "skills": "React, Node.js, MongoDB",
+        "priority": "10",
+        "Referral": "Rene Munoz - Software Architect"
+    },
+
+    "internship2": {
+        "company": "Dell",
+        "appDeadline": "10/25/2022",
+        "interntTitle": "Product Manager Intern",
+        "appSubmitted": "yes",
+        "appSubmittedDate": "10/13/2022",
+        "interview" : "no",
+        "rejected" : "no",
+        "skills": "Jira, Agile, Communication",
+        "priority": "9",
+        "Referral": "Michael Engel- Sr Product Manager"
+    },
+    
+    "internship3": {
+        "company": "Micron",
+        "appDeadline": "10/25/2022",
+        "interntTitle": "Full-stack Developer Intern",
+        "appSubmitted": "yes",
+        "appSubmittedDate": "10/12/2022",
+        "interview" : "no",
+        "rejected" : "no",
+        "skills": "React, Node.js, MongoDB",
+        "priority": "10",
+        "Referral": "Aaron Withers - Software Engineer"
+    }
+}
