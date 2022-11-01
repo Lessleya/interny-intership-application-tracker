@@ -7,10 +7,10 @@ router.get('/', internshipsController.getAll);
 
 router.get('/:id', internshipsController.getSingle);
 
-router.post('/', internshipsController.createInternships);
+router.post('/', internshipsController.createInternship);
 
-router.put('/:id', internshipsController.updateInternships);
+router.put('/:id', internshipsController.updateInternship);
 
-router.delete('/:id', internshipsController.deleteInternships);
+router.delete('/:id', internshipsController.deleteInternship);
 
 module.exports = router;

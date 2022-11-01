@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/', require('../swagger'));
+router.use('/api-docs', require('./docs'));
 router.use('/internships', require('./internships'));
 
 
