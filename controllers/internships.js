@@ -17,6 +17,7 @@ catch(error) {
 }; 
 
 const getSingle = async (req, res) => {
+
   let id = req.param.id 
   if (id) {
     const userId = new ObjectId(req.params.id);
@@ -35,6 +36,7 @@ const getSingle = async (req, res) => {
 };
 
 const createInternship = async (req, res) => {
+  
   const internship = {
     company: req.body.company,
     appDeadline: req.body.appDeadline,
