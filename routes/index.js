@@ -6,5 +6,4 @@ router.use('/internships', require('./internships'));
 
 
 
-
 module.exports = router;

@@ -1,14 +1,186 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Internshp API",
-    "description": "This API is to help students to track their internshop applications",
+    "title": "Interny API",
+    "description": "A APi THAT HELP YOU TRACK YOUR INTERNSHIP APPLICATIONS",
     "version": "1.0.0"
   },
-  "host": "localhost:3030",
+  "host": "",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
-  "paths": {}
+  "paths": {
+    "/internships/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "example": "any"
+                },
+                "appDeadline": {
+                  "example": "any"
+                },
+                "interntTitle": {
+                  "example": "any"
+                },
+                "appSubmitted": {
+                  "example": "any"
+                },
+                "appSubmittedDate": {
+                  "example": "any"
+                },
+                "interview": {
+                  "example": "any"
+                },
+                "rejected": {
+                  "example": "any"
+                },
+                "skills": {
+                  "example": "any"
+                },
+                "priority": {
+                  "example": "any"
+                },
+                "referral": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/internships/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "example": "any"
+                },
+                "appDeadline": {
+                  "example": "any"
+                },
+                "interntTitle": {
+                  "example": "any"
+                },
+                "appSubmitted": {
+                  "example": "any"
+                },
+                "appSubmittedDate": {
+                  "example": "any"
+                },
+                "interview": {
+                  "example": "any"
+                },
+                "rejected": {
+                  "example": "any"
+                },
+                "skills": {
+                  "example": "any"
+                },
+                "priority": {
+                  "example": "any"
+                },
+                "referral": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,12 @@
+User
+    username
+    _id
+    password
+    email
+    phoneNumber
+
+Internship
+
+    jobTitle
+    jobDescription
+    
