@@ -2,10 +2,10 @@
   "name": "interny-intership-application-tracker",
   "version": "1.0.0",
   "description": "Interny is a web app that help college students to keep track of internship applications. This app perform CRUD operations on a MongoDB database, is published to the web, incorporate security measures, and include API documentation.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "start": "node index.js",
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app",
     "generate-docs": "node swagger.js"
   },
   "repository": {
@@ -20,16 +20,27 @@
   },
   "homepage": "https://github.com/Lessleya/interny-intership-application-tracker#readme",
   "dependencies": {
+    "-": "^0.0.1",
+    "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "eslint": "^8.25.0",
     "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "joi-password-complexity": "^5.1.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.4",
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.7",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
     "swagger": "^0.7.5",
     "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.20",
     "swagger-autogen": "^2.22.0"
   }

@@ -1,0 +1,42 @@
+<h6>Dashboard</h6>
+<h3>Welcome {{name}}</h3>
+<p>Here are your internship applications</p>
+{{#if intrnships}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Internship</th>
+            <th>Company</th>
+            <th>Application Submitted</th>
+            <th>Application Deadline</th>
+            <th>Date</th>
+            <th>Skills</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each internships}}
+        <tr>
+            <td><a href="/internships/{{_id}}">{{title}}</a></td>
+            <td><a href="/internships/{{_id}}">{{company}}</a></td>
+            <td><span class="dash-status">{{applied}}</span></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            {{!-- <td>
+                <a href="/internships/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+
+                <form action="/internships/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn red">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </td> --}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You have not created any stories</p>
+{{/if}}

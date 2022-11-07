@@ -1,16 +1,16 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
+const { ensureAuth } = require('../middleware/auth')
 
-const internshipsController = require('../controllers/internships');
+const Story = require('../models/Internship')
 
-router.get('/', internshipsController.getAll);
 
-router.get('/:id', internshipsController.getSingle);
 
-router.post('/', internshipsController.createInternship);
+// @desc    Show add page
+// @route   GET /stories/add
+router.get('/add', ensureAuth, (req, res) => {
+    res.render('internships/add')
+  })
 
-router.put('/:id', internshipsController.updateInternship);
 
-router.delete('/:id', internshipsController.deleteInternship);
-
-module.exports = router;
+  module.exports = router
