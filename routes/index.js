@@ -4,7 +4,7 @@ const router = express.Router();
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 
-const Intership = require('../models/Internship')
+const Internship = require('../models/Internship')
 // @desc    Login/Landing page
 // @route   GET /
 router.get('/', ensureGuest, (req, res) => {
@@ -17,7 +17,7 @@ router.get('/', ensureGuest, (req, res) => {
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
     try {
-      const stories = await Story.find({ user: req.user.id }).lean()
+      const internships = await Internship.find({ user: req.user.id }).lean()
       res.render('dashboard', {
         name: req.user.firstName,
         internships,
@@ -28,5 +28,6 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
     }
   })
 
+  router.use('/api-docs', require('./docs'));
 
 module.exports = router;

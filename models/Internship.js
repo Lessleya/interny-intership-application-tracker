@@ -18,11 +18,10 @@ const InternshipSchema = new mongoose.Schema({
   applied: {
     type: String,
     required: true,
-    enum:['yes','no']
+    enum:['applied','not applied']
   },
   applicationDeadline: {
     type: Date,
-    required: true,
   },
   skills: {
     type: String,
@@ -37,4 +36,4 @@ const InternshipSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Intership', InternshipSchema)
+module.exports = mongoose.model('Internship', InternshipSchema)

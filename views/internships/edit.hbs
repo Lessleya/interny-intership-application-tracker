@@ -1,48 +1,51 @@
-<h3>Add Internship Application</h3>
+<h3>Edit Internship Application</h3>
 <div class="row">
-    <form action="/internships" method="POST" class="col s12">
+    <form action="/internships/{{internship._id}}" method="POST" class="col s12" >
+     <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
-                <input type="text" id="title" name="title">
+                <input type="text" id="title" name="title" value="{{internship.title}}">
                 <label for="title">Title</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field">
-                <input type="text" id="company" name="company">
+                <input type="text" id="company" name="company" value="{{internship.company}}">
                 <label for="title">Company</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field">
-                <input type="text" id="skills" name="skills">
+                <input type="text" id="skills" name="skills" value="{{internship.skills}}">
                 <label for="title">Skills</label>
             </div>
         </div>
 
           <div class="row">
             <div class="input-field">
-                <input type="date" id="applicationDeadline" name="applicationDeadline" >
-                <label for="title">Application Deadline</label>
+                <input type="date" id="applicationDeadline" name="applicationDeadline" value="{{internship.applicationDeadline}}" >
+                <label for="applicationDeadline">Application Deadline</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field">
-                <select id="applied" name="applied">
-                    <option value="not Applied" selected>Not Applied</option>
+                <select id="applied" name="applied" >
+                    {{#select internship.applied}}
+                    <option value="not applied" selected>Not Applied</option>
                     <option value="applied">Applied</option>
+                    {{/select}}
                 </select>
-                <label for="status">Application Submitted</label>
+                <label for="applied">Application Submitted</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field">
                 <h5>Description</h5>
-                <textarea id="body" name="body"></textarea>
+                <textarea id="body" name="body">{{internship.body}}</textarea>
             </div>
         </div>
 

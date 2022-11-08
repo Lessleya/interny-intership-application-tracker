@@ -1,7 +1,7 @@
 <h6>Dashboard</h6>
 <h3>Welcome {{name}}</h3>
 <p>Here are your internship applications</p>
-{{#if intrnships}}
+{{#if internships}}
 <table class="striped">
     <thead>
         <tr>
@@ -9,8 +9,8 @@
             <th>Company</th>
             <th>Application Submitted</th>
             <th>Application Deadline</th>
-            <th>Date</th>
             <th>Skills</th>
+           
             <th></th>
         </tr>
     </thead>
@@ -20,8 +20,10 @@
             <td><a href="/internships/{{_id}}">{{title}}</a></td>
             <td><a href="/internships/{{_id}}">{{company}}</a></td>
             <td><span class="dash-status">{{applied}}</span></td>
-            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
-            {{!-- <td>
+            <td><span class="dash-status">{{applicationDeadline}}</span></td>
+            <td><span class="dash-status">{{skills}}</span></td>
+            
+            <td>
                 <a href="/internships/edit/{{_id}}" class="btn btn-float">
                     <i class="fas fa-edit"></i>
                 </a>
@@ -32,7 +34,7 @@
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>
-            </td> --}}
+            </td>
         </tr>
         {{/each}}
     </tbody>
